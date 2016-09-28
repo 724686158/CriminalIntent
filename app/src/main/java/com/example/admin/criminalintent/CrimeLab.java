@@ -20,13 +20,6 @@ public class CrimeLab {
 
     private CrimeLab() {
         mCrimeList = new ArrayList<Crime>();
-        for (int i = 0; i < 25; i++)
-        {
-            Crime crime = new Crime();
-            crime.setTitle("Crime #" + i);
-            crime.setSolved(i % 2 == 0);
-            mCrimeList.add(crime);
-        }
     }
 
     public List<Crime> getCrimeList() {
@@ -54,5 +47,9 @@ public class CrimeLab {
             ;
         }
         return ourInstance;
+    }
+    public void addCrime(Crime crime)
+    {
+        mCrimeList.add(crime);
     }
 }
