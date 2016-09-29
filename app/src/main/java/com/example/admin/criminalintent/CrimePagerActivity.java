@@ -57,11 +57,15 @@ public class CrimePagerActivity extends AppCompatActivity {
         });
         for (int i = 0; i < mCrimeList.size(); i++)
         {
-            if (mCrimeList.get(i).getId().equals(crimeId))
+            if (mCrimeList.get(i) != null)
             {
-                mViewPager.setCurrentItem(i);
-                break;
+                if (mCrimeList.get(i).getId().equals(crimeId))
+                {
+                    mViewPager.setCurrentItem(i);
+                    break;
+                }
             }
+
         }
     }
 
